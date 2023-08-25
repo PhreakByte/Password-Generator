@@ -1,36 +1,68 @@
-body {
-    font-family: Arial, sans-serif;
+/* Reset default margin and padding */
+body, h1, h2, h3, p, ul, li, button, input {
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+}
+
+body {
+    font-family: Arial, sans-serif;
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Center horizontally */
     align-items: center;
     min-height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
+    background-color: #f0f0f0; /* Light mode background color */
+    color: #333; /* Light mode text color */
 }
 
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
+    text-align: center; /* Center the content inside the container */
 }
 
 .card {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-h1 {
+.card h1 {
     margin-bottom: 20px;
     color: #333;
 }
 
 .input-group {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center input elements horizontally */
+}
+
+.label {
+    margin-right: 10px;
+    color: #555;
+    font-weight: bold;
+}
+
+.input-field {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    background-color: transparent;
+    font-size: 14px;
+    color: #333;
+    transition: border-color 0.3s;
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.checkbox-label {
+    color: #555;
 }
 
 .password-field {
@@ -48,30 +80,32 @@ h1 {
     right: 10px;
     transform: translateY(-50%);
     font-size: 18px;
+    color: #333;
 }
 
 .password-strength {
     margin-top: 10px;
     font-weight: bold;
+    color: #555;
 }
 
-#strength {
-    color: #d9534f; /* Red color for weak */
+.strength-weak {
+    color: #d9534f;
 }
 
-#strength.medium {
-    color: #f0ad4e; /* Orange color for medium */
+.strength-medium {
+    color: #f0ad4e;
 }
 
-#strength.strong {
-    color: #5cb85c; /* Green color for strong */
+.strength-strong {
+    color: #5cb85c;
 }
 
 button {
     background-color: #007bff;
     color: #fff;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     padding: 10px 20px;
     cursor: pointer;
     transition: background-color 0.2s;
@@ -79,4 +113,41 @@ button {
 
 button:hover {
     background-color: #0056b3;
+}
+
+.qr-code {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.dark-mode {
+    background-color: #333;
+    color: #f0f0f0;
+}
+
+.dark-mode .card {
+    background-color: #444;
+    color: #f0f0f0;
+}
+
+.dark-mode .input-field {
+    border-color: #555;
+    background-color: transparent;
+    color: #f0f0f0;
+}
+
+.dark-mode .password-strength {
+    color: #f0ad4e;
+}
+
+.dark-mode .copy-icon {
+    color: #f0f0f0;
+}
+
+.dark-mode-icon {
+    color: #f0f0f0;
+}
+
+.dark-mode-icon:hover {
+    color: #007bff;
 }

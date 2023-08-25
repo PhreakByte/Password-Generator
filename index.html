@@ -4,18 +4,26 @@
     <title>Password Generator</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
+<body class="light-mode">
     <div class="container">
         <div class="card">
             <h1>Password Generator</h1>
             <div class="input-group">
-                <label for="length">Password Length:</label>
-                <input type="number" id="length" min="4" max="50" value="12">
+                <label class="label" for="length">Password Length:</label>
+                <input class="input-field" type="number" id="length" min="4" max="50" value="12">
             </div>
             <div class="input-group">
-                <label for="password">Generated Password:</label>
+                <label class="label" for="charset">Custom Character Set:</label>
+                <input class="input-field" type="text" id="charset" placeholder="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()_+">
+            </div>
+            <div class="input-group">
+                <input type="checkbox" id="passphrase"> 
+                <label class="checkbox-label" for="passphrase">Generate Passphrase</label>
+            </div>
+            <div class="input-group">
+                <label class="label" for="password">Generated Password:</label>
                 <div class="password-field">
-                    <input type="text" id="password" readonly>
+                    <input class="input-field" type="text" id="password" readonly>
                     <span id="copy" class="copy-icon">&#128203;</span>
                 </div>
             </div>
@@ -23,8 +31,13 @@
                 Password Strength: <span id="strength">Weak</span>
             </div>
             <button id="generate">Generate Password</button>
+            <button id="dark-mode-toggle" class="dark-mode-icon">&#9788;</button>
+        </div>
+        <div class="qr-code">
+            <canvas id="qrCanvas"></canvas>
         </div>
     </div>
+    <script src="https://cdn.rawgit.com/neocotic/qrious/4.0.2/qrious.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
