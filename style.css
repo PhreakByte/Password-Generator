@@ -33,18 +33,38 @@ h1 {
     margin-bottom: 10px;
 }
 
-label {
-    display: block;
-    margin-bottom: 5px;
-    color: #555;
+.password-field {
+    position: relative;
 }
 
-input {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    outline: none;
+#password {
+    padding-right: 40px;
+}
+
+.copy-icon {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 18px;
+}
+
+.password-strength {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#strength {
+    color: #d9534f; /* Red color for weak */
+}
+
+#strength.medium {
+    color: #f0ad4e; /* Orange color for medium */
+}
+
+#strength.strong {
+    color: #5cb85c; /* Green color for strong */
 }
 
 button {

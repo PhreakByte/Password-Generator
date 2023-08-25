@@ -14,7 +14,13 @@
             </div>
             <div class="input-group">
                 <label for="password">Generated Password:</label>
-                <input type="text" id="password" readonly>
+                <div class="password-field">
+                    <input type="text" id="password" readonly>
+                    <span id="copy" class="copy-icon">&#128203;</span>
+                </div>
+            </div>
+            <div class="password-strength">
+                Password Strength: <span id="strength">Weak</span>
             </div>
             <button id="generate">Generate Password</button>
         </div>
